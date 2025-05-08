@@ -13,8 +13,9 @@ export class Ui {
                <div data-id="${arr[i].id}" class="card h-100 bg-transparent" role="button" "="">
                   <div class="card-body">
                      <figure class="position-relative">
-                        <img class="card-img-top object-fit-cover h-100" src="${game.thumbnail}" loading="lazy" width="100%" height="200">
-                     </figure>
+                        <img class="card-img-top object-fit-cover h-100" src="${arr[i].thumbnail}" loading="lazy" width="100%" height="200">
+
+                        </figure>
                      <figcaption>
                         <div class="hstack justify-content-between">
                            <h3 class="h6 small">${arr[i].title}</h3>
