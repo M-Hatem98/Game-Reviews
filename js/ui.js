@@ -13,7 +13,7 @@ export class Ui {
                <div data-id="${arr[i].id}" class="card h-100 bg-transparent" role="button" "="">
                   <div class="card-body">
                      <figure class="position-relative">
-                        <img class="card-img-top object-fit-cover h-100" src="${arr[i].thumbnail}">
+                        <img class="card-img-top object-fit-cover h-100" src="${game.thumbnail}" loading="lazy" width="100%" height="200">
                      </figure>
                      <figcaption>
                         <div class="hstack justify-content-between">
@@ -72,11 +72,11 @@ export class Ui {
               <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded">
                   <div class="carousel-item active">
-                    <img src="${data.thumbnail}" class="d-block w-100" alt="Main Image">
+                    <img src="${data.thumbnail}" class="d-block w-100" alt="Main Image" loading="lazy">
                   </div>
                   ${data.screenshots.map((screenshot, index) => `
                     <div class="carousel-item">
-                      <img src="${screenshot.image}" class="d-block w-100" alt="Alt Image ${index + 1}">
+                      <img src="${screenshot.image}" class="d-block w-100" alt="Alt Image ${index + 1}" loading="lazy">
                     </div>
                   `).join('')}
                 </div>
@@ -84,9 +84,9 @@ export class Ui {
       
               <!-- Thumbnails -->
               <div class="d-flex justify-content-between flex-wrap mt-3 gap-2">
-                <img src="${data.thumbnail}" width="24%" class="img-thumbnail p-1 cursor-pointer" data-bs-target="#gameCarousel" data-bs-slide-to="0">
+                <img src="${data.thumbnail}" width="24%" class="img-thumbnail p-1 cursor-pointer" data-bs-target="#gameCarousel" data-bs-slide-to="0" loading="lazy">
                 ${data.screenshots.map((screenshot, index) => `
-                  <img src="${screenshot.image}" width="24%" class="img-thumbnail p-1 cursor-pointer" data-bs-target="#gameCarousel" data-bs-slide-to="${index + 1}">
+                  <img src="${screenshot.image}" width="24%" class="img-thumbnail p-1 cursor-pointer" data-bs-target="#gameCarousel" data-bs-slide-to="${index + 1}" loading="lazy">
                 `).join('')}
               </div>
             </div>
@@ -96,7 +96,7 @@ export class Ui {
           holder += `
             <div class="col-md-8 mx-auto">
             <h3 class="text-center title mb-4">${data.title}</h3>
-              <img src="${data.thumbnail}" class="w-100 rounded mb-3" alt="Main Game Image">
+              <img src="${data.thumbnail}" class="w-100 rounded mb-3" alt="Main Game Image" loading="lazy">
             </div>
           `;
         }
